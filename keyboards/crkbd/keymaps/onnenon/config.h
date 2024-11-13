@@ -20,25 +20,37 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
+// default but used in macros
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
 
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
-#define OLED_ENABLE
+// Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
+#define QUICK_TAP_TERM 0
 
-#ifdef RGBLIGHT_ENABLE
-    #define RGBLIGHT_EFFECT_BREATHING
-    #define RGBLIGHT_EFFECT_RAINBOW_MOOD
-    #define RGBLIGHT_EFFECT_RAINBOW_SWIRL
-    #define RGBLIGHT_EFFECT_SNAKE
-    #define RGBLIGHT_EFFECT_KNIGHT
-    #define RGBLIGHT_EFFECT_CHRISTMAS
-    #define RGBLIGHT_EFFECT_STATIC_GRADIENT
-    #define RGBLIGHT_EFFECT_RGB_TEST
-    #define RGBLIGHT_EFFECT_ALTERNATING
-    #define RGBLIGHT_EFFECT_TWINKLE
-    #define RGBLIGHT_LIMIT_VAL 120
-    #define RGBLIGHT_HUE_STEP 10
-    #define RGBLIGHT_SAT_STEP 17
-    #define RGBLIGHT_VAL_STEP 17
+// Auto Shift
+#define NO_AUTO_SHIFT_ALPHA
+#define AUTO_SHIFT_TIMEOUT TAPPING_TERM
+#define AUTO_SHIFT_NO_SETUP
+
+// Mouse key speed and acceleration.
+#undef MOUSEKEY_DELAY
+#define MOUSEKEY_DELAY 0
+#undef MOUSEKEY_INTERVAL
+#define MOUSEKEY_INTERVAL 16
+#undef MOUSEKEY_WHEEL_DELAY
+#define MOUSEKEY_WHEEL_DELAY 0
+#undef MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED 6
+#undef MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX 64
+
+// Thumb Combos
+#if defined(MIRYOKU_KLUDGE_THUMBCOMBOS)
+#    define COMBO_COUNT 8
+#    define COMBO_TERM 200
+#    define EXTRA_SHORT_COMBOS
 #endif
+
+#define U_NP KC_NO // key is not present
+#define U_NA KC_NO // present but not available for use
+#define U_NU KC_NO // available but not used
