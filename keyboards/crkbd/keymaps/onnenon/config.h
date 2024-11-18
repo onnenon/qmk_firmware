@@ -21,13 +21,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // default but used in macros
-#undef TAPPING_TERM
 #define TAPPING_TERM 200
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 50
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
-// Auto Shift
+
 #define NO_AUTO_SHIFT_ALPHA
 #define AUTO_SHIFT_TIMEOUT TAPPING_TERM
 #define AUTO_SHIFT_NO_SETUP
@@ -44,13 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef MOUSEKEY_TIME_TO_MAX
 #define MOUSEKEY_TIME_TO_MAX 64
 #define COMBO_TERM 15
-
-// Thumb Combos
-#if defined(MIRYOKU_KLUDGE_THUMBCOMBOS)
-#    define COMBO_COUNT 8
-#    define COMBO_TERM 200
-#    define EXTRA_SHORT_COMBOS
-#endif
 
 #define U_NP KC_NO // key is not present
 #define U_NA KC_NO // present but not available for use
