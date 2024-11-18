@@ -24,7 +24,7 @@ enum layer_names { BASE, NUM, SYM, NAV, FN };
 
 const uint16_t PROGMEM combo_tab[]  = {KC_C, KC_V, COMBO_END};
 const uint16_t PROGMEM combo_del[]  = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_caps[] = {KC_Q, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_caps[] = {LGUI_T(KC_A), LGUI_T(KC_QUOT), COMBO_END};
 const uint16_t PROGMEM combo_esc[]  = {KC_E, KC_R, COMBO_END};
 
 combo_t key_combos[] = {
@@ -33,6 +33,12 @@ combo_t key_combos[] = {
     [COMBO_DEL]  = COMBO(combo_del, KC_DEL),
     [COMBO_CAPS] = COMBO(combo_caps, CW_TOGG),
 };
+
+const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SEMICOLON);
+const key_override_t dot_key_override   = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLON);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {&comma_key_override, &dot_key_override};
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
