@@ -34,6 +34,14 @@ combo_t key_combos[] = {
     [COMBO_CAPS] = COMBO(combo_caps, CW_TOGG),
 };
 
+uint16_t get_combo_term(uint16_t index, combo_t *combo) {
+    switch (index) {
+        case COMBO_ESC:
+            return 300;
+    }
+    return COMBO_TERM;
+}
+
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SEMICOLON);
 const key_override_t dot_key_override   = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLON);
 
