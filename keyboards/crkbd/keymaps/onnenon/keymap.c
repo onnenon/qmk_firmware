@@ -44,9 +44,10 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
 const key_override_t comma_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_SEMICOLON);
 const key_override_t dot_key_override   = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLON);
+const key_override_t del_key_override   = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 
 // This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {&comma_key_override, &dot_key_override};
+const key_override_t *key_overrides[] = {&comma_key_override, &dot_key_override, &del_key_override};
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
