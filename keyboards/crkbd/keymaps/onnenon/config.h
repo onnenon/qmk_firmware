@@ -22,7 +22,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // default but used in macros
 #undef TAPPING_TERM
-#define TAPPING_TERM 200
 
 // Enable rapid switch from tap to hold, disables double tap hold auto-repeat.
 #define QUICK_TAP_TERM 100
@@ -49,3 +48,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define U_NP KC_NO // key is not present
 #define U_NA KC_NO // present but not available for use
 #define U_NU KC_NO // available but not used
+
+#define TAPPING_TERM 250
+#define PERMISSIVE_HOLD
+#define FLOW_TAP_TERM 150
+#define CHORDAL_HOLD
+#define SPECULATIVE_HOLD

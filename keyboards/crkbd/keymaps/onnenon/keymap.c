@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,               KC_W,               KC_E,               KC_R,               KC_T,           KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,
     LGUI_T(KC_A),       LALT_T(KC_S),       LCTL_T(KC_D),       LSFT_T(KC_F),       KC_G,           KC_H,           LSFT_T(KC_J),   LCTL_T(KC_K),   LALT_T(KC_L),   LGUI_T(KC_QUOT),
     KC_Z,               KC_X,               KC_C,               KC_V,               KC_B,           KC_N,           KC_M,           KC_COMM,        KC_DOT,         KC_SLSH,
-                                            KC_ESC,             LT(NAV,KC_LSFT),    LT(NUM,KC_ENT), LT(SYM,KC_SPC), LT(FN,KC_BSPC), KC_DEL
+                                            KC_ESC,             LT(NAV,KC_TAB),    LT(NUM,KC_ENT), LT(SYM,KC_SPC), LT(FN,KC_BSPC), KC_DEL
 ),
 
 [NUM] = LAYOUT_split_3x5_3(
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [NAV] = LAYOUT_split_3x5_3(
     U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              KC_HOME,           KC_PGDN,           KC_PGUP,           KC_END,            U_NA,
     KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NA,              KC_LEFT,           KC_DOWN,           KC_UP,             KC_RIGHT,          KC_BSPC,
-    U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              KC_DEL,
+    U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              MS_WHLD,           MS_WHLU,           U_NA,              KC_DEL,
                                           U_NA,              U_NA,              U_NA,              U_NA,              U_NA,              U_NA
 ),
 
